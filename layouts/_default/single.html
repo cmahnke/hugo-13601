@@ -4,5 +4,5 @@
   {{ $defaultContentLanguage := partialCached "functions/i18n/default-lang" . }}
   {{ .Content }}
   Lang (from tepmlate without file extension): {{ $defaultContentLanguage }}<br />
-  Lang: {{ $.Sites.Default.Languages 0).Lang }}
+  Lang: {{ ($.Sites.Default.Languages 0).Lang }}
 {{ end }}
