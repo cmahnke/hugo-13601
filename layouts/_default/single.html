@@ -1,8 +1,17 @@
 {{ define "main" }}
   <p style="color: green;">[layouts/_default/single.html]</p>
   <h1>{{ .Title }}</h1>
-  {{ $defaultContentLanguage := partialCached "functions/i18n/default-lang" . }}
-  {{ .Content }}
-  Lang (from tepmlate without file extension): {{ $defaultContentLanguage }}<br />
-{{/* Lang: {{ ($.Sites.Default.Languages 0).Lang }} */}}
+
+  <ul>
+  {{ with .Resources }}
+    {{ range . }}
+
+      <li>{{ . }} MediaType {{ .MediaType }}</li>
+
+    {{ end }}
+  {{ else }}
+    {{ warnf "No resources for %s" .RelPermalink }}
+  {{ end }}
+  </ul>
+
 {{ end }}

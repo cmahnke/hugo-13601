@@ -2,3 +2,7 @@ baseURL = 'https://example.org/'
 languageCode = 'en'
 title = 'My New Hugo Site'
 defaultcontentlanguage = "en"
+
+[mediaTypes]
+  [mediaTypes."image/jxl"]
+    suffixes = ["jxl"]
