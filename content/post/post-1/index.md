@@ -6,5 +6,5 @@ resources:
   - name: test1
     src: sunset1.jxl
   - name: test2
-    src: sunset.test.jxl
+    src: other.test.jxl
 ---
