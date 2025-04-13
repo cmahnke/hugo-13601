@@ -10,4 +10,4 @@ details = 'https://github.com/gohugoio/hugo/issues/13601'
 
 [posts/index.html](/posts/index.html)
 
-[posts/post-1/index.html](/posts/post-1/index.html)
+[post/post-1/index.html](/post/post-1/)
