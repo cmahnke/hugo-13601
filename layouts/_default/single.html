@@ -3,15 +3,13 @@
   <h1>{{ .Title }}</h1>
 
   <ul>
-  {{ with .Resources }}
-    {{ range . }}
 
-      <li>{{ . }} MediaType {{ .MediaType }}</li>
-
+    {{ if .Params.resources }}
+      {{ range .Params.resources }}
+        {{ $res := $.Resources.Get .src }}
+        <li>Name: {{ .src }} Loaded: {{ printf "%#v" $res }} MediaType {{ $res.MediaType }}</li>
+      {{ end }}
     {{ end }}
-  {{ else }}
-    {{ warnf "No resources for %s" .RelPermalink }}
-  {{ end }}
   </ul>
 
 {{ end }}
